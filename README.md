@@ -1,32 +1,51 @@
 # Parthos - Teste Técnico Full Stack
 
+## Transforme seus problemas em solução
+
+O **Parthos** é uma plataforma de gestão de tarefas projetada para trazer organização e eficiência ao seu dia a dia. Com uma interface responsiva e funcionalidades intuitivas, ele transforma desafios em soluções, ajudando você a manter o foco no que realmente importa.
+
+### Origem do Nome "Parthos"
+Inspirado em **Paarthurnax**, de *Skyrim*, **Parthos** simboliza a transformação do caos em ordem e a superação de desafios com sabedoria e foco.
+
+---
+
 ## Introdução
-Este projeto é a implementação do teste técnico para desenvolvimento Full Stack, atendendo aos requisitos especificados. O Parthos é um sistema de gerenciamento de tarefas (To-Do List) estruturado em microserviços, utilizando NestJS no backend e React no frontend, com infraestrutura baseada em Docker.
 
-## Funcionalidades Implementadas
+Este projeto é a implementação de um teste técnico para desenvolvimento **Full Stack**, atendendo aos requisitos especificados. O **Parthos** é um sistema de gerenciamento de tarefas (*To-Do List*) estruturado em **microserviços**, utilizando **NestJS** no backend e **React** no frontend, com infraestrutura baseada em **Docker**.
 
-### 1. Autenticação de Usuário
+### Funcionalidades Implementadas
+
+#### 1. Autenticação de Usuário
 - Registro e login de usuários com JWT para autenticação segura.
-- Proteção de rotas pelo Proxy.
+- Proteção de rotas via Proxy.
+- CI/CD configurado com GitHub Actions.
 
-### 2. Gerenciamento de Tarefas
+#### 2. Gerenciamento de Tarefas
 - Criar, editar, excluir e listar tarefas.
 - Marcar tarefas como concluídas.
-- Filtragem por status (pendente, concluída).
+- Funcionalidade de arrastar tarefas entre colunas.
+- Registro de atividades.
 
-### 3. Persistência de Dados
-- PostgreSQL como banco de dados principal.
-- TypeORM para gerência de migrations e models.
+#### 3. Persistência de Dados
+- **PostgreSQL** como banco de dados principal.
+- **TypeORM** para gerenciamento de *migrations* e *models*.
 
-### 4. Infraestrutura Dockerizada
-- Docker Compose para gerenciar os containers do sistema.
-- Nginx como proxy reverso.
+#### 4. Infraestrutura Dockerizada
+- **Docker Compose** para gerenciamento dos containers.
+- **Nginx** como *proxy* reverso.
+
+#### 5. Releases
+- [Frontend](https://github.com/Gaiteiro2025/parthos-web/releases/tag/v1.0.0)
+- [User API](https://github.com/Gaiteiro2025/parthos-user-api/releases/tag/v1.0.0)
+- [Task API](https://github.com/Gaiteiro2025/parthos-task-api/releases/tag/v1.0.0)
+
+---
 
 ## Tecnologias Utilizadas
 
 ### Frontend
 - Angular
-- Material
+- Material UI
 
 ### Backend
 - NestJS
@@ -39,20 +58,21 @@ Este projeto é a implementação do teste técnico para desenvolvimento Full St
 - Nginx
 - CI/CD com GitHub Actions
 
+---
+
 ## Estrutura do Projeto
 
-Os repositórios:
+### Repositórios
 
-| Nome do Serviço         | Repositório | Porta |
-|----------------------|-----------------------------------|-------|
-| Parthos Gateway     | https://github.com/Gaiteiro2025/parthos-root.git     | 3000  |
-| Parthos Web    | https://github.com/Gaiteiro2025/parthos-web.git    | 8080  |
-| Parthos User API    | https://github.com/Gaiteiro2025/parthos-user-api.git    | 3001  |
-| Parthos Task API    | https://github.com/Gaiteiro2025/parthos-task-api.git    | 3002  |
-| Template Parthos    | https://github.com/Gaiteiro2025/template-pathos-api.git    |      |
+| Serviço            | Repositório | Porta |
+|------------------|-----------------------------------|------|
+| Parthos Gateway | [Repositório](https://github.com/Gaiteiro2025/parthos-root.git) | 3000  |
+| Parthos Web | [Repositório](https://github.com/Gaiteiro2025/parthos-web.git) | 8080  |
+| Parthos User API | [Repositório](https://github.com/Gaiteiro2025/parthos-user-api.git) | 3001  |
+| Parthos Task API | [Repositório](https://github.com/Gaiteiro2025/parthos-task-api.git) | 3002  |
+| Template Parthos | [Repositório](https://github.com/Gaiteiro2025/template-pathos-api.git) | - |
 
-
-Seguindo as diretrizes do projeto de infraestrutura (parthos-root), a estrutura de pastas ficará da seguinte forma:
+### Estrutura de Pastas
 
 ```
 parthos-root/
@@ -69,10 +89,11 @@ parthos-root/
 │   ├── parthos-web
 ```
 
-## Como Rodar o Projeto
-Recomendo seguir os passo a passo pelo projeto de base pois ele te guiara com mais detalhes, porem abaixo esta a base necessaria para rodar
+---
 
-### 1. Clone o Repositório
+## Como Rodar o Projeto
+
+### 1. Clonar o Repositório
 ```sh
 mkdir parthos
 cd parthos
@@ -80,7 +101,7 @@ git clone git@github.com:Gaiteiro2025/parthos-root.git
 cd parthos-root
 ```
 
-### 2. Configure o Ambiente
+### 2. Configurar o Ambiente
 Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 ```sh
 DB_HOST=db
@@ -92,17 +113,17 @@ HOST=proxy
 JWT_SECRET=default_secret
 ```
 
-### 3. Configure as Permissões do Script
+### 3. Configurar Permissões do Script
 ```sh
 chmod +x ./scripts/start.dev.sh
 ```
 
-### 4. Execute o Script de Setup
+### 4. Executar o Script de Setup
 ```sh
 ./scripts/start.dev.sh
 ```
 Esse script:
-- Baixa os Repositorios necessarios
+- Baixa os repositórios necessários.
 - Configura os containers Docker.
 - Inicializa o Nginx como proxy reverso.
 - Carrega as variáveis de ambiente automaticamente.
@@ -113,7 +134,10 @@ Caso prefira iniciar manualmente:
 docker-compose up --build
 ```
 
+---
+
 ## Testes
+
 ### Testes Unitários
 ```sh
 npm run test
@@ -131,9 +155,13 @@ npm run test:e2e
 docker-compose -f docker-compose.test.yml up
 ```
 
+---
+
 ## CI/CD
-O projeto utiliza GitHub Actions para execução automática dos testes a cada commit.
+O projeto utiliza **GitHub Actions** para execução automática de testes a cada commit.
+
+---
 
 ## Licença
-Este projeto está sob a licença MIT.
+Este projeto está sob a **licença MIT**.
 
