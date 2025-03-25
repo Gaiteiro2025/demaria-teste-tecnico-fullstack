@@ -49,9 +49,13 @@ Os repositórios:
 | Parthos Web    | https://github.com/Gaiteiro2025/parthos-web.git    | 8080  |
 | Parthos User API    | https://github.com/Gaiteiro2025/parthos-user-api.git    | 3001  |
 | Parthos Task API    | https://github.com/Gaiteiro2025/parthos-task-api.git    | 3002  |
+| Template Parthos    | https://github.com/Gaiteiro2025/template-pathos-api.git    |      |
+
+
+Seguindo as diretrizes do projeto de infraestrutura (parthos-root), a estrutura de pastas ficará da seguinte forma:
 
 ```
-parthos/
+parthos-root/
 ├── docker-compose.yml
 ├── scripts/
 │   ├── setup.sh
@@ -63,10 +67,10 @@ parthos/
 │   ├── parthos-user-api
 │   ├── parthos-task-api
 │   ├── parthos-web
-│   ├── parthos-gateway
 ```
 
 ## Como Rodar o Projeto
+Recomendo seguir os passo a passo pelo projeto de base pois ele te guiara com mais detalhes, porem abaixo esta a base necessaria para rodar
 
 ### 1. Clone o Repositório
 ```sh
