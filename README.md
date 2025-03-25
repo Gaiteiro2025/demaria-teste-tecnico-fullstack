@@ -35,9 +35,9 @@ Este projeto é a implementação de um teste técnico para desenvolvimento **Fu
 - **Nginx** como *proxy* reverso.
 
 #### 5. Releases
-- [Frontend](https://github.com/Gaiteiro2025/parthos-web/releases/tag/v1.0.0)
-- [User API](https://github.com/Gaiteiro2025/parthos-user-api/releases/tag/v1.0.0)
-- [Task API](https://github.com/Gaiteiro2025/parthos-task-api/releases/tag/v1.0.0)
+- [Frontend](https://github.com/Gaiteiro2025/parthos-web)
+- [User API](https://github.com/Gaiteiro2025/parthos-user-api)
+- [Task API](https://github.com/Gaiteiro2025/parthos-task-api)
 
 ---
 
