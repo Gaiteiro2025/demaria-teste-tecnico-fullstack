@@ -16,9 +16,9 @@ Este projeto é a implementação de um teste técnico para desenvolvimento **Fu
 ### Funcionalidades Implementadas
 
 #### 1. Autenticação de Usuário
-- Registro e login de usuários com JWT para autenticação segura.
-- Proteção de rotas via Proxy.
-- CI/CD configurado com GitHub Actions.
+- Registro e login de usuários com **JWT** para autenticação segura.
+- Proteção de rotas via **Proxy**.
+- **CI/CD** configurado com **GitHub Actions**.
 
 #### 2. Gerenciamento de Tarefas
 - Criar, editar, excluir e listar tarefas.
@@ -65,12 +65,12 @@ Este projeto é a implementação de um teste técnico para desenvolvimento **Fu
 ### Repositórios
 
 | Serviço            | Repositório | Porta |
-|------------------|-----------------------------------|------|
-| Parthos Gateway | [Repositório](https://github.com/Gaiteiro2025/parthos-root.git) | 3000  |
-| Parthos Web | [Repositório](https://github.com/Gaiteiro2025/parthos-web.git) | 8080  |
-| Parthos User API | [Repositório](https://github.com/Gaiteiro2025/parthos-user-api.git) | 3001  |
-| Parthos Task API | [Repositório](https://github.com/Gaiteiro2025/parthos-task-api.git) | 3002  |
-| Template Parthos | [Repositório](https://github.com/Gaiteiro2025/template-pathos-api.git) | - |
+|--------------------|-------------|-------|
+| Parthos Gateway    | [Repositório](https://github.com/Gaiteiro2025/parthos-root.git) | 3000  |
+| Parthos Web        | [Repositório](https://github.com/Gaiteiro2025/parthos-web.git) | 8080  |
+| Parthos User API   | [Repositório](https://github.com/Gaiteiro2025/parthos-user-api.git) | 3001  |
+| Parthos Task API   | [Repositório](https://github.com/Gaiteiro2025/parthos-task-api.git) | 3002  |
+| Template Parthos API | [Repositório](https://github.com/Gaiteiro2025/template-parthos-api.git) | - |
 
 ### Estrutura de Pastas
 
@@ -125,7 +125,7 @@ chmod +x ./scripts/start.dev.sh
 Esse script:
 - Baixa os repositórios necessários.
 - Configura os containers Docker.
-- Inicializa o Nginx como proxy reverso.
+- Inicializa o **Nginx** como proxy reverso.
 - Carrega as variáveis de ambiente automaticamente.
 
 ### 5. Inicialização Manual dos Microserviços
@@ -162,6 +162,11 @@ O projeto utiliza **GitHub Actions** para execução automática de testes a cad
 
 ---
 
+## Template Parthos API
+
+Para facilitar a criação de novas APIs no ecossistema **Parthos**, foi desenvolvido um template base que pode ser utilizado para estruturar futuras APIs. Este template inclui configuração de **NestJS**, **Docker**, **JWT**, **TypeORM** e **CI/CD com GitHub Actions**. Confira o repositório [Template Parthos API](https://github.com/Gaiteiro2025/template-parthos-api.git).
+
+---
+
 ## Licença
 Este projeto está sob a **licença MIT**.
-
